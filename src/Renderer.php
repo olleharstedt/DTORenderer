@@ -9,7 +9,7 @@ use RuntimeException;
 class Renderer
 {
     /** @var string */
-    private $suffix = '.php';
+    public $suffix = '.php';
 
     public function render(RenderableInterface $element, Filename $filename = null): HtmlString
     {
@@ -21,6 +21,7 @@ class Renderer
             throw new RuntimeException('Found no such file: ' . $filename);
         }
         if (!function_exists('render')) {
+            // Import render() function and initialise it with this specific renderer.
             require 'render.php';
             render(null, null, $this);
         }
