@@ -23,8 +23,8 @@ class Renderer
         if (!function_exists('render')) {
             // Import render() function and initialise it with this specific renderer.
             require 'render.php';
-            render(null, null, $this);
         }
+        render(null, null, $this);
         ob_start();
         extract(iterator_to_array($element));
         include $filename;

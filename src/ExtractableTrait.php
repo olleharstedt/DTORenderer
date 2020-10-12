@@ -17,6 +17,9 @@ trait ExtractableTrait
     }
 
     public function rewind() {
+        $this->__objectvars = null;
+        $this->__position = null;
+        $this->init();
     }
 
     public function current() {
