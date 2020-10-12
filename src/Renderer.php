@@ -24,3 +24,4 @@ class Renderer
         return new HtmlString(ob_get_clean());
     }
 }
+

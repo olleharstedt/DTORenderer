@@ -11,7 +11,7 @@ abstract class BaseRenderable implements RenderableInterface
     use ExtractableTrait;
 
     /** @var string */
-    //private $viewfile = null;
+    protected $viewfile = null;
 
     /**
      * @param vec $options
@@ -27,7 +27,10 @@ abstract class BaseRenderable implements RenderableInterface
         }
         $this->init();
         if ($this->viewfile === null) {
-            throw new RuntimeException('viewfile cannot be null');
+            // Default to class name as viewfile if not given.
+            $parts = explode('\\', static::class);
+            $viewfile = strtolower(end($parts));
+            $this->viewfile = 'views/' . $viewfile . '.php';
         }
     }
 

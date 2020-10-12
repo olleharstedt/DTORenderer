@@ -1,3 +1,5 @@
+<div>
 <?php foreach ($buttons as $button): ?>
-    <?= $renderer->render($button); ?>
+    <?= render($button); ?>
 <?php endforeach; ?>
+</div>
