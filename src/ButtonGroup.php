@@ -8,5 +8,5 @@ class ButtonGroup extends BaseRenderable
     protected $buttons = [];
 
     /** @var string */
-    protected $viewfile = 'views/buttongroup.php';
+    protected $viewfile = 'views/buttongroup';
 }

@@ -30,7 +30,8 @@ abstract class BaseRenderable implements RenderableInterface
             // Default to class name as viewfile if not given.
             $parts = explode('\\', static::class);
             $viewfile = strtolower(end($parts));
-            $this->viewfile = 'views/' . $viewfile . '.php';
+            // NB: File suffix is added by the renderer.
+            $this->viewfile = 'views/' . $viewfile;
         }
     }
 
