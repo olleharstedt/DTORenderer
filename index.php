@@ -8,6 +8,7 @@ use App\Renderer;
 
 $renderer = new Renderer();
 $renderer->suffix = '.php';
+// TODO: Further setup, base folder, subfolders, etc.
 
 $button1 = new Button(['label' => 'Button 1']);
 $button2 = new Button(['label' => 'Button 2']);
