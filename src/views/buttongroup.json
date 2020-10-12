@@ -1,0 +1,8 @@
+{
+    "buttons": [
+        <?php foreach($buttons as $i => $button): ?>
+        <?= render($button); ?>
+        <?php if ($i !== count($buttons) - 1): ?>,<?php endif; ?>
+        <?php endforeach; ?>
+    ]
+}
