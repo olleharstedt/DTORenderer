@@ -36,15 +36,6 @@ abstract class BaseRenderable implements RenderableInterface
     }
 
     /**
-     * @param Renderer $renderer
-     * @return HtmlString
-     */
-    public function toHtml(Renderer $renderer): HtmlString
-    {
-        return new $renderer->render($this, $this->viewfile);
-    }
-
-    /**
      * @return string
      */
     public function getViewfile(): string
