@@ -13,6 +13,9 @@ abstract class BaseRenderable implements RenderableInterface
     /** @var string */
     protected $viewfile = null;
 
+    /** @var string */
+    protected $viewfolder = 'views';
+
     /**
      * @param vec $options
      */
@@ -23,6 +26,7 @@ abstract class BaseRenderable implements RenderableInterface
                 throw new RuntimeException('No such property: ' . $prop);
             } else {
                 $this->$prop = $value;
+                unset($options[$prop]);
             }
         }
         $this->init();
@@ -30,8 +34,8 @@ abstract class BaseRenderable implements RenderableInterface
             // Default to class name as viewfile if not given.
             $parts = explode('\\', static::class);
             $viewfile = strtolower(end($parts));
-            // NB: File suffix is added by the renderer.
-            $this->viewfile = 'views/' . $viewfile;
+            // NB: Filetype is added by the renderer.
+            $this->viewfile = $this->viewfolder . '/' . $viewfile;
         }
     }
 
