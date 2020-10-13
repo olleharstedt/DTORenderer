@@ -6,7 +6,7 @@ Small conception of rendering engine.
 * Viewfiles are decouple from the objects
 * Objects are immutable (private properties)
 * Short-hand `render` function can be used in viewfiles to render child objects.
-* Using an option array as input to constructor gives the posibility to provide validation, default values, etc
+* Using an option array as input to DTO constructors gives the posibility to provide validation, default values, etc
 
 ## Cons
 
