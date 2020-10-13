@@ -1,5 +1,19 @@
 <?php
 
+/**
+ * This example will output:
+ * <div>
+ *     <button>Button 1</button>
+ *     <button>Button 2</button>
+ * </div>
+ * {
+ *     "buttons": [
+ *         {"label": "Button 1"},
+ *         {"label": "Button 2"}
+ *     ]
+ * }
+ */
+
 require __DIR__ . "/vendor/autoload.php";
 
 use App\Button;
